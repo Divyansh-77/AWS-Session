@@ -1,0 +1,52 @@
+# A descriptive name for your workflow
+name: Deploy to AWS EC2
+
+# --- TRIGGER SECTION ---
+# This section defines when the workflow will run.
+on:
+  # It runs on any 'push' event
+  push:
+    # but only for the 'main' branch
+    branches:
+      - main
+
+# --- JOBS SECTION ---
+# A workflow is made up of one or more jobs that run in parallel or sequentially.
+jobs:
+  # We have a single job named 'deploy'.
+  deploy:
+    # A descriptive name for the job that shows up in GitHub's UI.
+    name: Deploy Application
+    # Specifies that this job will run on a fresh virtual machine hosted by GitHub.
+    runs-on: ubuntu-latest
+
+    # --- STEPS SECTION ---
+    # A job is made up of a sequence of steps.
+    steps:
+      # Step 1: Checks out your repository's code onto the runner.
+      - name: 1. Checkout the repository
+        uses: actions/checkout@v3
+
+      # Step 2: Securely connects to your EC2 instance and runs deployment commands.
+      - name: 2. Deploy to EC2
+        uses: appleboy/ssh-action@master
+        with:
+          # These are the secrets you configured in your GitHub repository settings.
+          host: ${{ secrets.EC2_HOST_IP }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          
+          # This is the script that will be run on your EC2 server.
+          script: |
+            # Navigate to the project directory on the server
+            cd /home/ubuntu/AWS-Session
+            
+            # Pull the latest changes from the main branch
+            git pull origin main
+            
+            # Install any new dependencies that might have been added
+            npm install
+            
+            # Reload the application using PM2 for a zero-downtime update
+            pm2 reload automated-app
