@@ -1,0 +1,65 @@
+---
+- name: Configure and Deploy Node.js Application
+  hosts: webserver
+  become: yes
+  vars:
+    project_repo: "https://github.com/verma-kunal/AWS-Session.git"
+    project_dest: "/home/ubuntu/AWS-Session"
+    node_version: "18.x"
+
+  tasks:
+    - name: 1. Update APT package cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: 2. Install Git
+      apt:
+        name: git
+        state: present
+
+    - name: 3. Setup Node.js repository
+      shell: "curl -fsSL https://deb.nodesource.com/setup_{{ node_version }} | sudo -E bash -"
+      args:
+        warn: false
+
+    - name: 4. Install Node.js (npm is included)
+      apt:
+        name: nodejs
+        state: present
+
+    - name: 5. Clone the application from GitHub
+      git:
+        repo: "{{ project_repo }}"
+        dest: "{{ project_dest }}"
+        version: main
+      become: no
+
+    - name: 6. Install application dependencies with npm
+      shell: "npm install"
+      args:
+        chdir: "{{ project_dest }}"
+      become: no
+
+    - name: 7. Create the .env file
+      template:
+        src: .env.j2
+        dest: "{{ project_dest }}/.env"
+      become: no
+
+    # -- THIS TASK IS NOW CORRECTED --
+    - name: 8. Install PM2 process manager globally
+      shell: "npm install pm2 -g" # Using the direct shell command
+
+    - name: 9. Start the application with PM2
+      shell: "pm2 start npm --name 'automated-app' -- run start"
+      args:
+        chdir: "{{ project_dest }}"
+      become: no
+      ignore_errors: yes
+
+    - name: 10. Configure PM2 to start on server boot
+      shell: "pm2 startup | sudo tee /etc/init.d/pm2-init.sh > /dev/null && pm2 save"
+      args:
+        warn: false
+      become: no

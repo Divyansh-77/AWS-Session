@@ -1,0 +1,277 @@
+[33mcommit b211b3c209178406ecbc2066446b71f32719ff32[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Divyansh Tewari <tewaridivyansh3@gmail.com>
+Date:   Fri Oct 10 13:29:53 2025 +0530
+
+    feat: Add final automation code
+
+[33mcommit fbbe1638b4286d192122f2c29379962d6d8ddeaf[m
+Author: Divyansh Tewari <tewaridivyansh3@gmail.com>
+Date:   Fri Oct 10 13:26:49 2025 +0530
+
+    CHORE: Solidify gitignore rules
+
+[33mcommit 9dc3c49cd1d7ff7103e977501f4a49f21bf6fd48[m
+Author: Divyansh Tewari <tewaridivyansh3@gmail.com>
+Date:   Fri Oct 10 13:18:30 2025 +0530
+
+    feat: Add complete automation suite (Terraform, Ansible, GitHub)
+
+[33mcommit df1f05dcff31244bc68e3b65aa78b24c34816990[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Kunal Verma <72245772+verma-kunal@users.noreply.github.com>
+Date:   Thu Jan 19 08:54:21 2023 +0530
+
+    Update README.md
+
+[33mcommit e2ed6bd14d248a73c0adc68c8deb4c24f88ee4dc[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Tue Jan 17 21:48:07 2023 +0530
+
+    inital commit
+
+[33mcommit bb074f436621eb0cd34d434acb9304e7c31b6cbf[m
+Author: Kunal Verma <72245772+verma-kunal@users.noreply.github.com>
+Date:   Sun Nov 13 21:18:27 2022 +0530
+
+    Update index.html
+
+[33mcommit 224cc1a9b8858623277f05e1eb4521355d8e8cc9[m
+Author: Kunal Verma <72245772+verma-kunal@users.noreply.github.com>
+Date:   Sun Nov 13 21:17:45 2022 +0530
+
+    Update index.html
+
+[33mcommit a290afcf9252e7dc7214d06196d0d276f63410c5[m
+Author: Kunal Verma <72245772+verma-kunal@users.noreply.github.com>
+Date:   Sun Nov 13 21:15:02 2022 +0530
+
+    Update index.html
+
+[33mcommit d3fbc5557ded59fbf742d64b46f396f54ee0ccdd[m
+Author: Kunal Verma <72245772+verma-kunal@users.noreply.github.com>
+Date:   Sat Nov 12 15:59:11 2022 +0530
+
+    Update index.html
+
+[33mcommit 0ec94900751f48e0dd16a46cad5480536609d3ad[m
+Author: Kunal Verma <72245772+verma-kunal@users.noreply.github.com>
+Date:   Sat Nov 12 15:33:34 2022 +0530
+
+    Update index.html
+
+[33mcommit 04de0f31c03f360df50901a60cdf50443de9eb77[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Sat Nov 12 09:56:41 2022 +0000
+
+    update index.html
+
+[33mcommit 44abff197ea7eea28d69b98e2f400c147282dd86[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Sat Nov 12 09:38:49 2022 +0000
+
+    update docker-compose
+
+[33mcommit bf0c3b01321af9baf8a92c8e373cc6b03226aaae[m
+Author: Ubuntu <ubuntu@ip-172-31-11-238.ap-south-1.compute.internal>
+Date:   Fri Nov 11 20:41:45 2022 +0000
+
+    add docker-compose
+
+[33mcommit aad796316221e6bcb64b886623caa4bab433625a[m
+Author: Ubuntu <ubuntu@ip-172-31-11-238.ap-south-1.compute.internal>
+Date:   Fri Nov 11 17:29:09 2022 +0000
+
+    update index.html
+
+[33mcommit c3f631d541cb3f99eb8706c23c7f5e500d86a631[m
+Merge: a95daad 0fe93aa
+Author: Kunal Verma <72245772+verma-kunal@users.noreply.github.com>
+Date:   Fri Nov 11 21:18:55 2022 +0530
+
+    Merge pull request #1 from verma-kunal/feature-patch
+    
+    Update code
+
+[33mcommit 0fe93aaa59f56235dcd02693ee5cd0d974705f76[m[33m ([m[1;31morigin/feature-patch[m[33m)[m
+Author: Ubuntu <ubuntu@ip-172-31-11-238.ap-south-1.compute.internal>
+Date:   Fri Nov 11 15:44:35 2022 +0000
+
+    Update code
+
+[33mcommit a95daad7680fb995a7a92acbd06418bb1ed6e2af[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Thu Nov 10 20:38:08 2022 +0530
+
+    delete procfile
+
+[33mcommit e48c6031e2e12b901bf648dc3bb756f16a364585[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Fri Nov 4 13:48:01 2022 +0530
+
+    update gitignore
+
+[33mcommit 2f792323ea47d67c42c89d3488744e52f3ef8e18[m[33m ([m[1;31morigin/new-patch[m[33m)[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Fri Nov 4 13:40:02 2022 +0530
+
+    Update files
+    
+    Signed-off-by: Kunal Verma <vkunal321@gmail.com>
+
+[33mcommit 216b784ac7ea1e2bfd9ba6ab55913a794d578108[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Tue Oct 4 12:35:33 2022 +0530
+
+    Update priceId
+
+[33mcommit 261ffa1c8499a83c4df8c781ec36644564ba20dc[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Tue Oct 4 12:25:19 2022 +0530
+
+    Update project structure
+
+[33mcommit 91d0e0dc22d155de859680dfeee91b33a9133ac4[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Tue Sep 27 18:19:36 2022 +0530
+
+    Update file
+
+[33mcommit 610c7c1159926d446e8e4e089ef6e54bb3223778[m
+Merge: ebe3ef9 e868b2c
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Tue Sep 27 18:14:44 2022 +0530
+
+    Merge branch 'main' of https://github.com/verma-kunal/Stripe-Payment-Integration
+
+[33mcommit ebe3ef9de4b37811efd03f2257eb24f5764328d9[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Tue Sep 27 18:14:35 2022 +0530
+
+    Update
+
+[33mcommit e868b2cc260bbdcc9f93d14f2791069e251b3445[m
+Merge: eef06ab 7243075
+Author: Kunal Verma <72245772+verma-kunal@users.noreply.github.com>
+Date:   Wed Jun 29 14:46:29 2022 +0530
+
+    Merge pull request #4 from samjn08/main
+    
+    Added wrapping to workshop cards
+
+[33mcommit 72430758f1082530b103b8171f3c65befabb4ee4[m
+Author: JJ Thompson <81349382+samjn08@users.noreply.github.com>
+Date:   Wed Jun 29 14:34:23 2022 +0530
+
+    added wrapping to workshop cards
+
+[33mcommit eef06ab6ea477e41a8dc16319ca85f63380a5c6f[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Wed Jun 29 11:24:46 2022 +0530
+
+    Update app.js
+
+[33mcommit ea08a6d96766116aea9c025915b8256749c87f91[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Wed Jun 29 11:21:27 2022 +0530
+
+    Update URL
+
+[33mcommit 8091711ea76e6a17cbdc1959870430c41f34e6e8[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Wed Jun 29 10:07:49 2022 +0530
+
+    Small design changes
+
+[33mcommit bff22e8f7044e32baf4ef0a94a1aeef2be0fd36a[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Wed Jun 29 09:38:49 2022 +0530
+
+    Hover effect improved
+
+[33mcommit 008488d81473efe793e98676da5504ff9d0b68a6[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Wed Jun 29 09:24:38 2022 +0530
+
+    Add: Hover effect
+
+[33mcommit d6b34773c29efb5dabe6efe5ec41570306d7c6df[m
+Merge: 54f2ac6 6fdaf0e
+Author: Kunal Verma <72245772+verma-kunal@users.noreply.github.com>
+Date:   Wed Jun 29 09:10:28 2022 +0530
+
+    Merge pull request #3 from samjn08/main
+    
+    Responsiveness and design changes
+
+[33mcommit 6fdaf0ebff84b856e703f1db3eaa2de279f5b40e[m
+Author: JJ Thompson <81349382+samjn08@users.noreply.github.com>
+Date:   Wed Jun 29 04:58:01 2022 +0530
+
+    Updated design and responsiveness
+
+[33mcommit 54f2ac61485989d23f59ad13734f47632bf0b654[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Tue Jun 28 20:57:55 2022 +0530
+
+    Update style
+
+[33mcommit da7f3117b1f825e3dba0fff20298d3c979e8861f[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Tue Jun 28 14:16:46 2022 +0530
+
+    Clean Up code
+
+[33mcommit 88dfcb998307c32f80f0d355be5a78cd017e37e7[m
+Author: Devansh Chaudhary <58871818+devansh016@users.noreply.github.com>
+Date:   Tue Jun 28 13:54:26 2022 +0530
+
+    updated files (#2)
+
+[33mcommit e44deae5301452b349b3f167ee90af5faf2bc399[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Tue Jun 28 12:57:20 2022 +0530
+
+    Add: speaker-cards
+
+[33mcommit d22d16cfb863378f56182a63ff9890795fc0f1e0[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Mon Jun 27 23:21:26 2022 +0530
+
+    Add: workshop-routes
+
+[33mcommit 24a2a42291a6afaddef87e79be0c7cb73414825a[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Mon Jun 27 22:23:30 2022 +0530
+
+    Update server.js
+
+[33mcommit bc112f12450ac602f4c0fa3117ee9f836ec921f4[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Wed Jun 22 22:32:10 2022 +0530
+
+    Update index.html
+
+[33mcommit caa8c7d45230fbdffe4b7cd9c76d330a8c0ca72a[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Wed Jun 22 22:21:29 2022 +0530
+
+    Update Client files
+
+[33mcommit 14e5804953a3d76aa98c5710524c742da1b89359[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Wed Jun 22 21:45:09 2022 +0530
+
+    Update index.html
+
+[33mcommit 94068aec87a9a84bcf21800da22518d302503885[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Mon Jun 20 19:20:08 2022 +0530
+
+    Update cancel.html
+
+[33mcommit f55a086951103681008a8132f1edee2307421258[m
+Author: Kunal Verma <vkunal321@gmail.com>
+Date:   Mon Jun 20 18:59:45 2022 +0530
+
+    Update: Procfile
+
+[33mc
