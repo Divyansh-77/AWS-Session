@@ -1,95 +1,130 @@
-# Stripe Payment Demo: Automated AWS Deployment
+# 🚀 Automated CI/CD Pipeline for a Node.js App on AWS
 
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?logo=terraform&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?logo=ansible&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform" />
+  <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+</p>
 
-This project is a simple Node.js application for Stripe payments. Its primary purpose is to demonstrate a fully automated deployment pipeline to the AWS cloud using modern DevOps tools. The entire process, from provisioning infrastructure to deploying the application, is managed through code.
-
----
-
-### 🚀 Live Demo
-
-You can view the live application here: **[http://107.22.16.112:3000/]**
-
-> **Note:** This is a live demo running on an AWS EC2 instance. The environment may be decommissioned to manage costs, so the IP address can change. The automation scripts in this repository can be used to redeploy it at any time.
+<p align="center">
+  <img src="https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/deploy.yml/badge.svg" alt="CI/CD Status" />
+</p>
 
 ---
 
-### 🛠️ Technology Stack
+## 🎯 Project Goal
 
-| Category                   | Technology                                      |
-| -------------------------- | ----------------------------------------------- |
-| **Cloud Provider** | AWS (EC2, VPC, Security Group, Elastic IP)      |
-| **Infrastructure as Code** | Terraform                                       |
-| **Configuration Management**| Ansible                                         |
-| **Backend** | Node.js, Express.js                             |
-| **Payments** | Stripe API                                      |
-| **Process Manager** | PM2                                             |
+The goal was to transform a manual deployment process for a Node.js application into a **fully automated CI/CD pipeline**. Now, every `git push` to the `main` branch automatically builds, tests, and deploys the application to an AWS EC2 instance with **zero manual intervention**.
+
+This project showcases a real-world DevOps workflow, demonstrating skills in Infrastructure as Code (IaC), Configuration Management, and CI/CD automation.
 
 ---
 
-### ⚙️ Automated Deployment Workflow
+## 🏗️ Architecture & Workflow
 
-This project is deployed using Infrastructure as Code and Configuration Management. No manual clicking in the AWS Console is required.
+The entire process is split into two phases: a one-time setup and the automated deployment cycle.
 
-#### Prerequisites
-* Terraform installed
-* Ansible installed
-* AWS account and credentials configured locally
+> **Analogy:** Think of it like setting up a new restaurant.
+>
+> 1.  **Phase 1 (Infrastructure):** You first build the kitchen (**Terraform creates the AWS EC2 server**) and then install all the equipment like ovens and stoves (**Ansible configures the server with Node.js, PM2, etc.**). This is a one-time job.
+> 2.  **Phase 2 (Automation):** Now, you hire a robotic chef (**GitHub Actions**). Every time a new recipe (`git push`) is finalized, the robot automatically cooks and serves it in the kitchen, without you needing to do anything.
 
-#### Deployment Steps
 
-1.  **Provision the Infrastructure**
-    From the project root, run Terraform to build the AWS server. This will create the EC2 instance, security group, and an elastic IP.
-    ```bash
-    terraform apply
-    ```
-    After it completes, Terraform will output the new `public_ip` for your server.
-
-2.  **Configure Ansible**
-    * Update the `inventory` file with the new IP address from the Terraform output and the path to your SSH private key.
-    * Update the `vars` section in `playbook.yml` with your personal Stripe API keys.
-
-3.  **Deploy the Application**
-    Run the Ansible playbook to configure the server, install all dependencies, and launch the application.
-    ```bash
-    ansible-playbook -i inventory playbook.yml
-    ```
-    Your application is now live and managed by PM2.
 
 ---
 
-### 💻 Running the Project Locally
+## 🛠️ Tech Stack
+
+| Tool             | Purpose                                   |
+| ---------------- | ----------------------------------------- |
+| **AWS EC2** | To host the Node.js web application.      |
+| **Terraform** | **Infrastructure as Code (IaC)** to provision the server. |
+| **Ansible** | **Configuration Management** to set up the server. |
+| **GitHub Actions** | **CI/CD** to automate the deployment workflow. |
+| **Node.js** | Application runtime environment.          |
+| **PM2** | Process manager for Node.js to ensure zero downtime. |
+
+---
+
+## 🚀 How to Run This Project
+
+### Prerequisites
+* An **AWS Account** with an IAM User (programmatic access).
+* **Terraform** installed on your local machine.
+* **Ansible** installed on your local machine.
+
+### Part 1: One-Time Infrastructure & Server Setup
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/Divyansh-77/Hosting-Node.js-App-on-AWS-EC2.git](https://github.com/Divyansh-77/Hosting-Node.js-App-on-AWS-EC2.git)
-    cd Hosting-Node.js-App-on-AWS-EC2
+    git clone [https://github.com/YOUR_USERNAME/YOUR_REPO.git](https://github.com/YOUR_USERNAME/YOUR_REPO.git)
+    cd YOUR_REPO
     ```
 
-2.  **Create a `.env` File**
-    Create a `.env` file in the root directory with your Stripe API keys.
-    ```
-    PUBLISHABLE_KEY=pk_your_publishable_key
-    SECRET_KEY=sk_your_secret_key
-    ```
-
-3.  **Install Dependencies and Start**
+2.  **Provision the Infrastructure with Terraform**
+    Navigate to the Terraform directory and run the commands. This will create the EC2 instance, security group, and an SSH key pair.
     ```bash
-    npm install
-    npm run start
+    cd terraform
+    terraform init
+    terraform apply --auto-approve
     ```
-    The application will be available at `http://localhost:3000`.
----
-*Update: Testing the Jenkins CI/CD pipeline!*
-*Triggering a new pipeline run.*
----
+    ✅ **Result:** Terraform will output the `public_ip` of your new EC2 server. An SSH key named `automated-deployment-tf.pem` will be created in this directory.
 
-### 📚 Project Evolution: From Manual to Automated
+3.  **Configure the Server with Ansible**
+    First, update the `ansible/inventory` file with the public IP from the previous step. Then, run the Ansible playbook.
+    ```bash
+    # Go back to the root directory
+    cd ..
 
-This project initially began as a manual deployment to AWS to understand the fundamentals of cloud hosting. The original process involved manually configuring the EC2 instance in the AWS console, SSHing into the server, and running a series of shell commands to deploy the application.
+    # Run the playbook to install Node.js, PM2, and deploy the app for the first time
+    ansible-playbook ansible/playbook.yml \
+      -i ansible/inventory \
+      -u ubuntu \
+      --private-key=terraform/automated-deployment-tf.pem
+    ```
+    🎉 **Success!** Your Node.js application is now live. You can access it at `http://<YOUR_EC2_PUBLIC_IP>:3000`.
 
-To embrace DevOps best practices, the project was re-engineered. The manual steps have been entirely replaced with a fully automated workflow using **Terraform** for Infrastructure as Code and **Ansible** for Configuration Management. This transformation showcases the move from a traditional, error-prone process to a modern, reliable, and repeatable deployment pipeline.
+### Part 2: Automating Deployments with GitHub Actions
+
+**1. Add GitHub Secrets**
+
+To allow GitHub Actions to securely access your server and use application credentials without hard-coding them, add the following secrets to your repository (`Settings` > `Secrets and variables` > `Actions`).
+
+This single, secure location is used for **both infrastructure credentials** (like the SSH key) **and application-level API keys** (like Stripe).
+
+| Name | Value |
+| :--- | :--- |
+| `EC2_HOST_IP` | Your EC2 instance's public IP address. |
+| `EC2_USERNAME` | `ubuntu` (for Ubuntu EC2 instances). |
+| `EC2_SSH_KEY` | The **entire content** of the `.pem` file. |
+| `STRIPE_SECRET_KEY` | Your Stripe secret key (e.g., `sk_test_...`). |
+| `STRIPE_PUBLIC_KEY` | Your Stripe publishable key (e.g., `pk_test_...`). |
+
+**2. Trigger the CI/CD Pipeline**
+
+The workflow file `.github/workflows/deploy.yml` is already set up. Simply make a change to your code and push it to the `main` branch.
+```bash
+git add .
+git commit -m "Testing my new automated pipeline!"
+git push origin main
+
+📂 Repository Structure
+.
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # GitHub Actions workflow for CI/CD
+├── ansible/
+│   ├── inventory           # Holds the server IP for Ansible
+│   └── playbook.yml        # Ansible playbook to configure the server
+├── app/
+│   ├── .env                # Stores local environment variables (MUST be in .gitignore)
+│   ├── index.js            # Sample Node.js application
+│   └── package.json
+├── terraform/
+│   ├── main.tf             # Main Terraform script for creating AWS resources
+│   ├── outputs.tf
+│   └── variables.tf
+├── .gitignore              # Specifies files to be ignored by Git
+└── README.md
