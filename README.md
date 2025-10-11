@@ -9,9 +9,8 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/deploy.yml/badge.svg" alt="CI/CD Status" />
+  <img src="https://github.com/Divyansh-77/AWS-CICD-Project/actions/workflows/deploy.yml/badge.svg" alt="CI/CD Status" />
 </p>
-
 ---
 
 ## 🎯 Project Goal
