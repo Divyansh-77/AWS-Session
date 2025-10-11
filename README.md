@@ -122,3 +122,9 @@ git push origin main
 │   └── variables.tf
 ├── .gitignore              # Specifies files to be ignored by Git
 └── README.md
+
+Project Evolution: From Manual to Automated
+
+This project initially began as a manual deployment to AWS to understand the fundamentals of cloud hosting. The original process involved manually configuring the EC2 instance in the AWS console, SSHing into the server, and running a series of shell commands to deploy the application.
+
+To embrace DevOps best practices, the project was re-engineered. The manual steps have been entirely replaced with a fully automated workflow using Terraform for Infrastructure as Code and Ansible for Configuration Management. This transformation showcases the move from a traditional, error-prone process to a modern, reliable, and repeatable deployment pipeline. This project is actively being expanded to integrate Docker for containerization and Kubernetes for orchestration.
