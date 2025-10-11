@@ -8,11 +8,6 @@
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
 </p>
 
-<p align="center">
-  <img src="https://github.com/Divyansh-77/AWS-Session/actions/workflows/deploy.yml/badge.svg" alt="CI/CD Status" />
-</p>
----
-
 ## 🎯 Project Goal
 
 The goal was to transform a manual deployment process for a Node.js application into a **fully automated CI/CD pipeline**. Now, every `git push` to the `main` branch automatically builds, tests, and deploys the application to an AWS EC2 instance with **zero manual intervention**.
