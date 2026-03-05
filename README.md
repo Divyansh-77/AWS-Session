@@ -38,7 +38,7 @@ The entire process is split into two phases: a one-time setup and the automated 
 | **Ansible** | **Configuration Management** to set up the server. |
 | **GitHub Actions** | **CI/CD** to automate the deployment workflow. |
 | **Node.js** | Application runtime environment.          |
-| **PM2** | Process manager for Node.js to ensure zero downtime. |
+| **PM2** | Process manager for Node.js to ensure zero downtime.. |
 
 ---
 
